@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1714676025
 icon.svg::CompressedTexture2D::410593426708531139::1714668460::1714668473::1::::<><>::
 ::res://character/::1714673492
@@ -8,3 +9,14 @@ player.png::CompressedTexture2D::457390490983327011::1714668572::1714673492::1::
 character.tscn::PackedScene::2653812162078688751::1714675734::0::1::::<><>::uid://grtfiw4kn0l8::::res://character/assets/player.png
 ::res://character/scripts/::1714673810
 character.gd::GDScript::-1::1714673810::0::1::::<>CharacterBody2D<>::
+=======
+::res://::1714675894
+icon.svg::CompressedTexture2D::410593426708531139::1714675850::1714675895::1::::<><>::
+::res://character/::1714675850
+::res://character/assets/::1714675850
+player.png::CompressedTexture2D::457390490983327011::1714675850::1714675850::1::::<><>::
+::res://character/scenes/::1714675850
+character.tscn::PackedScene::2653812162078688751::1714675850::0::1::::<><>::uid://grtfiw4kn0l8::::res://character/assets/player.png
+::res://character/scripts/::1714675850
+character.gd::GDScript::-1::1714675850::0::1::::<>CharacterBody2D<>::
+>>>>>>> 1429a0328e2b6988ad711c547078380bfc6d2bc9
