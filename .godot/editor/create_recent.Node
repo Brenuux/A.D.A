@@ -1,4 +1,5 @@
+AnimationTree
 AnimationPlayer
-CollisionShape2D
 Sprite2D
+CollisionShape2D
 CharacterBody2D
