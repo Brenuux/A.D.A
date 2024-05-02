@@ -5,23 +5,26 @@
 [sub_resource type="GDScript" id="GDScript_qesar"]
 script/source = "extends CharacterBody2D
 
+#variáveis
 @export_category(\"Variables\")
 @export var _move_speed: float = 64.0
 
+#aceleração e desaceleração do personagem
 @export var _friction: float = 0.2
 @export var _acceleration: float = 0.4
 
-
+#função chamada a cada frame de execução do projeto
 func _physics_process(_delta: float) -> void:
 	_move()
 	move_and_slide()
 
 func _move() -> void:
+	#armazenamento da direção de movimento do personagem
 	var _direction : Vector2 = Vector2(
 		Input.get_axis(\"move_left\", \"move_right\"),
 		Input.get_axis(\"move_up\", \"move_down\")
 	)
-	
+	#velocidade de movimento
 	if _direction != Vector2.ZERO:
 		velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
 		velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
@@ -32,17 +35,16 @@ func _move() -> void:
 
 
 	velocity = _direction.normalized() * _move_speed
-	
+	#permite movimento em todas as direções
+	move_and_slide()
 	
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6m2u"]
 size = Vector2(10, 3)
 
-[sub_resource type="Animation" id="Animation_7wiha"]
-resource_name = "indle_down"
-length = 0.6
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_jblsy"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,10 +52,10 @@ tracks/0/path = NodePath("Texture:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 3, 5]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -80,8 +82,10 @@ tracks/2/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_jblsy"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_7wiha"]
+resource_name = "indle_down"
+length = 0.6
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -89,10 +93,10 @@ tracks/0/path = NodePath("Texture:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 3, 5]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
