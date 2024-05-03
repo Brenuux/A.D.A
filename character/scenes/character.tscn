@@ -50,7 +50,7 @@ func _move() -> void:
 
 #função para definir a animação de acordo com a direção do movimento
 func _animate() -> void:
-	if velocity.lenght() > 2:
+	if velocity.length() > 2:
 		_state_machine.travel(\"walk\")
 		return
 		
@@ -497,9 +497,6 @@ states/walk/position = Vector2(627, 253)
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 script = SubResource("GDScript_qesar")
-_move_speed = null
-_friction = null
-_acceleration = null
 _animation_tree = NodePath("AnimationTree")
 
 [node name="Texture" type="Sprite2D" parent="."]
