@@ -1,6 +1,6 @@
-res://character/scenes
-res://menu
 res://terrain/scenes
+res://menu
+res://character/scenes
 res://levels/scenes
 res://
 res://terrain
