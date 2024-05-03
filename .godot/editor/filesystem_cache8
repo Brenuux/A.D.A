@@ -1,75 +1,75 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714761196
-icon.svg::CompressedTexture2D::410593426708531139::1714749974::1714754200::1::::<><>::
-::res://character/::1714756941
-::res://character/assets/::1714756941
-player.png::CompressedTexture2D::457390490983327011::1714749974::1714749974::1::::<><>::
-::res://character/scenes/::1714757099
-character.tscn::PackedScene::2653812162078688751::1714757099::0::1::::<><>::uid://grtfiw4kn0l8::::res://character/assets/player.png
-::res://character/scripts/::1714756941
-character.gd::GDScript::-1::1714749974::0::1::::<>CharacterBody2D<>::
-::res://levels/::1714760377
-level 1.mp3::AudioStreamMP3::7975077394786144723::1714760370::1714760377::1::::<><>::
-::res://levels/scenes/::1714760431
-test_level.tscn::PackedScene::2042826097534317221::1714760431::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn<>uid://dlvgmhur3kr0n::::res://levels/level 1.mp3
-::res://menu/::1714761025
-bg_menu.jpg::CompressedTexture2D::7370037291952743391::1714761018::1714761025::1::::<><>::
-menu.gd::GDScript::-1::1714758623::0::1::::<>Control<>::
-menu.tscn::PackedScene::1338887759090689545::1714760431::0::1::::<><>::res://menu/menu.gd<>uid://oyj14mt41v55::::res://menu/musica_menu.mp3
-musica_menu.mp3::AudioStreamMP3::1032783303224194670::1714759151::1714759163::1::::<><>::
-::res://terrain/::1714756941
-::res://terrain/assets/::1714756941
-casa.png::CompressedTexture2D::4869183203626470379::1714754300::1714754307::1::::<><>::
-::res://terrain/assets/base_terrain/::1714756941
-bloco 1.png::CompressedTexture2D::6293784197455042863::1714754375::1714754470::1::::<><>::
-bloco 2-2.png::CompressedTexture2D::5085778403747692508::1714754376::1714754470::1::::<><>::
-bloco 2-3.png::CompressedTexture2D::3684859626982968460::1714754377::1714754470::1::::<><>::
-bloco 2-4.png::CompressedTexture2D::616469914996464811::1714754378::1714754470::1::::<><>::
-bloco 2.png::CompressedTexture2D::3834352825911754252::1714754376::1714754470::1::::<><>::
-bloco 3-2.png::CompressedTexture2D::4336245277568016196::1714754380::1714754470::1::::<><>::
-bloco 3-3.png::CompressedTexture2D::7431678785440967186::1714754380::1714754470::1::::<><>::
-bloco 3-4.png::CompressedTexture2D::962534846757383647::1714754381::1714754470::1::::<><>::
-bloco 3.png::CompressedTexture2D::1723149442220109506::1714754379::1714754470::1::::<><>::
-bloco 4-2.png::CompressedTexture2D::6183386945018376930::1714754383::1714754470::1::::<><>::
-bloco 4-3.png::CompressedTexture2D::5196630742676345472::1714754384::1714754470::1::::<><>::
-bloco 4-4.png::CompressedTexture2D::4456396824509247743::1714754384::1714754470::1::::<><>::
-bloco 4.png::CompressedTexture2D::6889564432094469914::1714754382::1714754470::1::::<><>::
-bloco 5.png::CompressedTexture2D::8697893655520191731::1714754385::1714754470::1::::<><>::
-bloco 6.png::CompressedTexture2D::3224260259388016252::1714754386::1714754470::1::::<><>::
-grass.png::CompressedTexture2D::3912363384723508761::1714755541::1714755542::1::::<><>::
-parede 1.png::CompressedTexture2D::633697107646423479::1714754387::1714754495::1::::<><>::
-parede 2.png::CompressedTexture2D::1682779647169335952::1714754387::1714754495::1::::<><>::
-parede 3.png::CompressedTexture2D::1454720621708006656::1714754388::1714754495::1::::<><>::
-parede 4.png::CompressedTexture2D::1465916151504193989::1714754388::1714754495::1::::<><>::
-parede 5.png::CompressedTexture2D::2127222717176514479::1714754389::1714754495::1::::<><>::
-parede 6.png::CompressedTexture2D::5122738045589107101::1714754390::1714754495::1::::<><>::
-parede 7.png::CompressedTexture2D::4028771552629861701::1714754390::1714754495::1::::<><>::
-parede 8.png::CompressedTexture2D::535076934634826850::1714754391::1714754495::1::::<><>::
-parede 9.png::CompressedTexture2D::6561414353515986624::1714754392::1714754495::1::::<><>::
-parede 10.png::CompressedTexture2D::4322255121874705743::1714754392::1714754495::1::::<><>::
-parede 11.png::CompressedTexture2D::4032361935869769692::1714754375::1714754495::1::::<><>::
-parede 12.png::CompressedTexture2D::2936169958392905005::1714754375::1714754495::1::::<><>::
-parede 13.png::CompressedTexture2D::7146626280431271097::1714754375::1714754495::1::::<><>::
-parede 14.png::CompressedTexture2D::6716223901273244560::1714754375::1714754495::1::::<><>::
-parede 15.png::CompressedTexture2D::409150191588444043::1714754375::1714754495::1::::<><>::
-parede 16.png::CompressedTexture2D::5421351472121615155::1714754375::1714754495::1::::<><>::
-plains.png::CompressedTexture2D::2788462067424554260::1714755467::1714755468::1::::<><>::
-::res://terrain/assets/decoration_terrain/::1714756941
-arbusto baixo.png::CompressedTexture2D::1398289116949177682::1714754299::1714754540::1::::<><>::
-arbusto.png::CompressedTexture2D::3293209242843459040::1714754299::1714754540::1::::<><>::
-arvore 1.png::CompressedTexture2D::3899960029808984045::1714754299::1714754540::1::::<><>::
-bau.png::CompressedTexture2D::1014933210483446130::1714754300::1714754540::1::::<><>::
-flor.png::CompressedTexture2D::7051833867205537434::1714754301::1714754540::1::::<><>::
-grama.png::CompressedTexture2D::1251616720713236510::1714754302::1714754540::1::::<><>::
-pedra grama.png::CompressedTexture2D::7782542382282429232::1714754303::1714754540::1::::<><>::
-pedra.png::CompressedTexture2D::5856903810444086835::1714754303::1714754540::1::::<><>::
-placa 2.png::CompressedTexture2D::4475684651548339886::1714754304::1714754540::1::::<><>::
-placa 3.png::CompressedTexture2D::6219981049215659367::1714754304::1714754540::1::::<><>::
-placa para texto.png::CompressedTexture2D::7819262707264085213::1714754305::1714754540::1::::<><>::
-placa.png::CompressedTexture2D::5677808563054845867::1714754306::1714754540::1::::<><>::
-terra.png::CompressedTexture2D::5387799538581905223::1714754299::1714754540::1::::<><>::
-::res://terrain/scenes/::1714760431
-terrain.tscn::PackedScene::5713532675704053824::1714760431::0::1::::<><>::uid://dv6lbju4vcjnv::::res://terrain/assets/base_terrain/bloco 5.png<>uid://cvw0yamo0ut8r::::res://terrain/assets/base_terrain/bloco 1.png<>uid://cudjqknoo5y23::::res://terrain/assets/base_terrain/bloco 4-2.png<>uid://cgbj0p7od7k4o::::res://terrain/assets/base_terrain/bloco 4-3.png<>uid://b4qyg7sckm6yt::::res://terrain/assets/base_terrain/bloco 4-4.png<>uid://c5fmecjqxnxe5::::res://terrain/assets/base_terrain/bloco 4.png<>uid://bl64dijw4j6g3::::res://terrain/assets/base_terrain/bloco 6.png<>uid://bfy0tewkfjmw7::::res://terrain/assets/base_terrain/plains.png<>uid://cepua6r0qiu01::::res://terrain/assets/base_terrain/bloco 2-2.png<>uid://bsq8dnijt1bse::::res://terrain/assets/base_terrain/bloco 2-3.png<>uid://bv0gb2wudv53r::::res://terrain/assets/base_terrain/grass.png<>uid://i1vf04m5qe48::::res://terrain/assets/base_terrain/bloco 2-4.png<>uid://buvnh332sh8nw::::res://terrain/assets/base_terrain/bloco 2.png<>uid://b21rldcralh21::::res://terrain/assets/base_terrain/bloco 3-2.png<>uid://dd47wtmtau4mg::::res://terrain/assets/base_terrain/bloco 3-3.png<>uid://nyi2qnlybc6r::::res://terrain/assets/base_terrain/bloco 3-4.png<>uid://ysyawuyfx4ju::::res://terrain/assets/base_terrain/bloco 3.png
-::res://test_placa/::1714760991
-bg.jpg::CompressedTexture2D::5517888656361908433::1714760990::1714760991::1::::<><>::
-Dialog_Box.png::CompressedTexture2D::1254085066224916227::1714760771::1714760773::1::::<><>::
+::res://::1714767159
+icon.svg::CompressedTexture2D::410593426708531139::1714767144::1714767160::1::::<><>::
+::res://character/::1714767144
+::res://character/assets/::1714767144
+player.png::CompressedTexture2D::457390490983327011::1714767144::1714767144::1::::<><>::
+::res://character/scenes/::1714767144
+character.tscn::PackedScene::2653812162078688751::1714767144::0::1::::<><>::uid://grtfiw4kn0l8::::res://character/assets/player.png
+::res://character/scripts/::1714767144
+character.gd::GDScript::-1::1714767144::0::1::::<>CharacterBody2D<>::
+::res://levels/::1714767144
+level 1.mp3::AudioStreamMP3::7975077394786144723::1714767144::1714767144::1::::<><>::
+::res://levels/scenes/::1714767144
+test_level.tscn::PackedScene::2042826097534317221::1714767144::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn<>uid://dlvgmhur3kr0n::::res://levels/level 1.mp3
+::res://menu/::1714767144
+bg_menu.jpg::CompressedTexture2D::7370037291952743391::1714767144::1714767144::1::::<><>::
+menu.gd::GDScript::-1::1714767144::0::1::::<>Control<>::
+menu.tscn::PackedScene::1338887759090689545::1714767144::0::1::::<><>::res://menu/menu.gd<>uid://oyj14mt41v55::::res://menu/musica_menu.mp3<>uid://ddado4wpqpsux::::res://menu/bg_menu.jpg
+musica_menu.mp3::AudioStreamMP3::1032783303224194670::1714767144::1714767144::1::::<><>::
+::res://terrain/::1714767144
+::res://terrain/assets/::1714767144
+casa.png::CompressedTexture2D::4869183203626470379::1714767144::1714767144::1::::<><>::
+::res://terrain/assets/base_terrain/::1714767144
+bloco 1.png::CompressedTexture2D::6293784197455042863::1714767144::1714767144::1::::<><>::
+bloco 2-2.png::CompressedTexture2D::5085778403747692508::1714767144::1714767144::1::::<><>::
+bloco 2-3.png::CompressedTexture2D::3684859626982968460::1714767144::1714767144::1::::<><>::
+bloco 2-4.png::CompressedTexture2D::616469914996464811::1714767144::1714767144::1::::<><>::
+bloco 2.png::CompressedTexture2D::3834352825911754252::1714767144::1714767144::1::::<><>::
+bloco 3-2.png::CompressedTexture2D::4336245277568016196::1714767144::1714767144::1::::<><>::
+bloco 3-3.png::CompressedTexture2D::7431678785440967186::1714767144::1714767144::1::::<><>::
+bloco 3-4.png::CompressedTexture2D::962534846757383647::1714767144::1714767144::1::::<><>::
+bloco 3.png::CompressedTexture2D::1723149442220109506::1714767144::1714767144::1::::<><>::
+bloco 4-2.png::CompressedTexture2D::6183386945018376930::1714767144::1714767144::1::::<><>::
+bloco 4-3.png::CompressedTexture2D::5196630742676345472::1714767144::1714767144::1::::<><>::
+bloco 4-4.png::CompressedTexture2D::4456396824509247743::1714767144::1714767144::1::::<><>::
+bloco 4.png::CompressedTexture2D::6889564432094469914::1714767144::1714767144::1::::<><>::
+bloco 5.png::CompressedTexture2D::8697893655520191731::1714767144::1714767144::1::::<><>::
+bloco 6.png::CompressedTexture2D::3224260259388016252::1714767144::1714767144::1::::<><>::
+grass.png::CompressedTexture2D::3912363384723508761::1714767144::1714767144::1::::<><>::
+parede 1.png::CompressedTexture2D::633697107646423479::1714767144::1714767144::1::::<><>::
+parede 2.png::CompressedTexture2D::1682779647169335952::1714767144::1714767144::1::::<><>::
+parede 3.png::CompressedTexture2D::1454720621708006656::1714767144::1714767144::1::::<><>::
+parede 4.png::CompressedTexture2D::1465916151504193989::1714767144::1714767144::1::::<><>::
+parede 5.png::CompressedTexture2D::2127222717176514479::1714767144::1714767144::1::::<><>::
+parede 6.png::CompressedTexture2D::5122738045589107101::1714767144::1714767144::1::::<><>::
+parede 7.png::CompressedTexture2D::4028771552629861701::1714767144::1714767144::1::::<><>::
+parede 8.png::CompressedTexture2D::535076934634826850::1714767144::1714767144::1::::<><>::
+parede 9.png::CompressedTexture2D::6561414353515986624::1714767144::1714767144::1::::<><>::
+parede 10.png::CompressedTexture2D::4322255121874705743::1714767144::1714767144::1::::<><>::
+parede 11.png::CompressedTexture2D::4032361935869769692::1714767144::1714767144::1::::<><>::
+parede 12.png::CompressedTexture2D::2936169958392905005::1714767144::1714767144::1::::<><>::
+parede 13.png::CompressedTexture2D::7146626280431271097::1714767144::1714767144::1::::<><>::
+parede 14.png::CompressedTexture2D::6716223901273244560::1714767144::1714767144::1::::<><>::
+parede 15.png::CompressedTexture2D::409150191588444043::1714767144::1714767144::1::::<><>::
+parede 16.png::CompressedTexture2D::5421351472121615155::1714767144::1714767144::1::::<><>::
+plains.png::CompressedTexture2D::2788462067424554260::1714767144::1714767144::1::::<><>::
+::res://terrain/assets/decoration_terrain/::1714767144
+arbusto baixo.png::CompressedTexture2D::1398289116949177682::1714767144::1714767144::1::::<><>::
+arbusto.png::CompressedTexture2D::3293209242843459040::1714767144::1714767144::1::::<><>::
+arvore 1.png::CompressedTexture2D::3899960029808984045::1714767144::1714767144::1::::<><>::
+bau.png::CompressedTexture2D::1014933210483446130::1714767144::1714767144::1::::<><>::
+flor.png::CompressedTexture2D::7051833867205537434::1714767144::1714767144::1::::<><>::
+grama.png::CompressedTexture2D::1251616720713236510::1714767144::1714767144::1::::<><>::
+pedra grama.png::CompressedTexture2D::7782542382282429232::1714767144::1714767144::1::::<><>::
+pedra.png::CompressedTexture2D::5856903810444086835::1714767144::1714767144::1::::<><>::
+placa 2.png::CompressedTexture2D::4475684651548339886::1714767144::1714767144::1::::<><>::
+placa 3.png::CompressedTexture2D::6219981049215659367::1714767144::1714767144::1::::<><>::
+placa para texto.png::CompressedTexture2D::7819262707264085213::1714767144::1714767144::1::::<><>::
+placa.png::CompressedTexture2D::5677808563054845867::1714767144::1714767144::1::::<><>::
+terra.png::CompressedTexture2D::5387799538581905223::1714767144::1714767144::1::::<><>::
+::res://terrain/scenes/::1714767144
+terrain.tscn::PackedScene::5713532675704053824::1714767144::0::1::::<><>::uid://dv6lbju4vcjnv::::res://terrain/assets/base_terrain/bloco 5.png<>uid://cvw0yamo0ut8r::::res://terrain/assets/base_terrain/bloco 1.png<>uid://cudjqknoo5y23::::res://terrain/assets/base_terrain/bloco 4-2.png<>uid://cgbj0p7od7k4o::::res://terrain/assets/base_terrain/bloco 4-3.png<>uid://b4qyg7sckm6yt::::res://terrain/assets/base_terrain/bloco 4-4.png<>uid://c5fmecjqxnxe5::::res://terrain/assets/base_terrain/bloco 4.png<>uid://bl64dijw4j6g3::::res://terrain/assets/base_terrain/bloco 6.png<>uid://bfy0tewkfjmw7::::res://terrain/assets/base_terrain/plains.png<>uid://cepua6r0qiu01::::res://terrain/assets/base_terrain/bloco 2-2.png<>uid://bsq8dnijt1bse::::res://terrain/assets/base_terrain/bloco 2-3.png<>uid://bv0gb2wudv53r::::res://terrain/assets/base_terrain/grass.png<>uid://i1vf04m5qe48::::res://terrain/assets/base_terrain/bloco 2-4.png<>uid://buvnh332sh8nw::::res://terrain/assets/base_terrain/bloco 2.png<>uid://b21rldcralh21::::res://terrain/assets/base_terrain/bloco 3-2.png<>uid://dd47wtmtau4mg::::res://terrain/assets/base_terrain/bloco 3-3.png<>uid://nyi2qnlybc6r::::res://terrain/assets/base_terrain/bloco 3-4.png<>uid://ysyawuyfx4ju::::res://terrain/assets/base_terrain/bloco 3.png
+::res://test_placa/::1714767144
+bg.jpg::CompressedTexture2D::5517888656361908433::1714767144::1714767144::1::::<><>::
+Dialog_Box.png::CompressedTexture2D::1254085066224916227::1714767144::1714767144::1::::<><>::

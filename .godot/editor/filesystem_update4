@@ -1,3 +1,1 @@
-res://menu/menu.tscn
-res://terrain/scenes/terrain.tscn
-res://levels/scenes/test_level.tscn
+res://character/scenes/character.tscn
