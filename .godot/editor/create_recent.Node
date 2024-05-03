@@ -1,3 +1,12 @@
+Label
+MarginContainer
+NinePatchRect
+AudioStreamPlayer2D
+TextureRect
+AudioStreamPlayer
+ColorRect
+Button
+VBoxContainer
 TileMap
 AnimationTree
 AnimationPlayer
