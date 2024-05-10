@@ -12,7 +12,7 @@ func _process(delta):
 
 #função ao clicar iniciar irá jogar na cena teste
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://levels/scenes/test_level.tscn")
+	get_tree().change_scene_to_file("res://levels/scenes/test_level_2.tscn")
 
 
 #ao clicar em sair vai fechar o game 

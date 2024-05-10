@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bd2r5s05kv5uh"]
+[gd_scene load_steps=34 format=3 uid="uid://bd2r5s05kv5uh"]
 
 [ext_resource type="Texture2D" uid="uid://grtfiw4kn0l8" path="res://character/assets/player.png" id="2_fweo4"]
 
@@ -677,9 +677,6 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_hq5g3")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i0om2"]
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5y4k0"]
 states/End/position = Vector2(951, 171)
 states/Start/position = Vector2(506, 171)
@@ -689,7 +686,6 @@ states/idle/node = SubResource("AnimationNodeBlendSpace2D_b0cfb")
 states/idle/position = Vector2(664, 171)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_vj3rv")
 states/walk/position = Vector2(812, 171)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_i0om2")]
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 script = SubResource("GDScript_qesar")

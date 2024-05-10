@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 Node2D
 TileMap
 Button
@@ -5,11 +6,9 @@ VBoxContainer
 Label
 MarginContainer
 NinePatchRect
-AudioStreamPlayer2D
 TextureRect
 AudioStreamPlayer
 ColorRect
 AnimationTree
 AnimationPlayer
 Sprite2D
-CollisionShape2D
