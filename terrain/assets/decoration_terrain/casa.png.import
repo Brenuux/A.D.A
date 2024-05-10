@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ty57ndnsd3l"
-path="res://.godot/imported/parede 10.png-9acf51f882d6ad569887de489314237c.ctex"
+uid="uid://cbmw0a1pn56nv"
+path="res://.godot/imported/casa.png-f5446e6a2c5461a6b2f8fa6708aa4af7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrain/assets/base_terrain/parede 10.png"
-dest_files=["res://.godot/imported/parede 10.png-9acf51f882d6ad569887de489314237c.ctex"]
+source_file="res://terrain/assets/decoration_terrain/casa.png"
+dest_files=["res://.godot/imported/casa.png-f5446e6a2c5461a6b2f8fa6708aa4af7.ctex"]
 
 [params]
 

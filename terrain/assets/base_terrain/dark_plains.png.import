@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i1vf04m5qe48"
-path="res://.godot/imported/bloco 2-4.png-79cc07d6a3130520c24361a57adf24b7.ctex"
+uid="uid://ds8hitx840k65"
+path="res://.godot/imported/dark_plains.png-f01e14ca8fa4d394c4557e8bbfcb46d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrain/assets/base_terrain/bloco 2-4.png"
-dest_files=["res://.godot/imported/bloco 2-4.png-79cc07d6a3130520c24361a57adf24b7.ctex"]
+source_file="res://terrain/assets/base_terrain/dark_plains.png"
+dest_files=["res://.godot/imported/dark_plains.png-f01e14ca8fa4d394c4557e8bbfcb46d3.ctex"]
 
 [params]
 
