@@ -39,7 +39,7 @@ func _move() -> void:
 	#velocidade de movimento
 	if _direction != Vector2.ZERO:
 		_animation_tree[\"parameters/idle/blend_position\"] = _direction
-		_animation_tree[\"parameters/idle/blend_position\"] = _direction
+		_animation_tree[\"parameters/walk/blend_position\"] = _direction
 		
 		velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
 		velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
@@ -702,6 +702,8 @@ graph_offset = Vector2(137.022, 0)
 script = SubResource("GDScript_qesar")
 _animation_tree = NodePath("AnimationTree")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -17)
 texture = ExtResource("2_fweo4")
@@ -724,5 +726,3 @@ anim_player = NodePath("../Animation")
 parameters/attack/blend_position = Vector2(-0.0797912, -0.0476191)
 parameters/idle/blend_position = Vector2(0.00223708, 0.989418)
 parameters/walk/blend_position = Vector2(0, 0)
-
-[node name="Camera2D" type="Camera2D" parent="."]
