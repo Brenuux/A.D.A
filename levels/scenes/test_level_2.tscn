@@ -16,6 +16,9 @@ layer_1/tile_data = PackedInt32Array(589819, 196609, 4, 655355, 262145, 5, 58981
 [node name="Character" parent="." instance=ExtResource("2_jkqxb")]
 top_level = true
 position = Vector2(55, 53)
+_move_speed = 64.0
+_friction = 0.2
+_acceleration = 0.4
 
 [node name="Casa" type="Sprite2D" parent="."]
 position = Vector2(166, -53)
@@ -27,7 +30,7 @@ position = Vector2(110, 122)
 texture = ExtResource("7_djwxa")
 
 [node name="Terra2" type="Sprite2D" parent="."]
-position = Vector2(162, 252)
+position = Vector2(162, 251)
 texture = ExtResource("7_djwxa")
 
 [node name="Terra3" type="Sprite2D" parent="."]

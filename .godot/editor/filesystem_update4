@@ -3,4 +3,3 @@ res://menu/menu.tscn
 res://terrain/scenes/terrain.tscn
 res://terrain/scenes/object_terrain.tscn
 res://levels/scenes/test_level_2.tscn
-res://menu/menu.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bd2r5s05kv5uh"]
+[gd_scene load_steps=37 format=3 uid="uid://bd2r5s05kv5uh"]
 
 [ext_resource type="Texture2D" uid="uid://grtfiw4kn0l8" path="res://character/assets/player.png" id="2_fweo4"]
 
@@ -677,15 +677,26 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_hq5g3")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gtu57"]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7sawo"]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6q4cg"]
+switch_mode = 1
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5y4k0"]
 states/End/position = Vector2(951, 171)
-states/Start/position = Vector2(506, 171)
+states/Start/position = Vector2(540.667, 171.889)
 states/attack/node = SubResource("AnimationNodeBlendSpace2D_dp6g1")
 states/attack/position = Vector2(664, 96)
 states/idle/node = SubResource("AnimationNodeBlendSpace2D_b0cfb")
 states/idle/position = Vector2(664, 171)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_vj3rv")
 states/walk/position = Vector2(812, 171)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_gtu57"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_7sawo"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_6q4cg")]
+graph_offset = Vector2(137.022, 0)
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 script = SubResource("GDScript_qesar")
@@ -713,3 +724,5 @@ anim_player = NodePath("../Animation")
 parameters/attack/blend_position = Vector2(-0.0797912, -0.0476191)
 parameters/idle/blend_position = Vector2(0.00223708, 0.989418)
 parameters/walk/blend_position = Vector2(0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
