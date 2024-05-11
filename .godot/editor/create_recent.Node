@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Timer
 Camera2D
 AudioStreamPlayer2D
@@ -11,5 +13,3 @@ NinePatchRect
 TextureRect
 AudioStreamPlayer
 ColorRect
-AnimationTree
-AnimationPlayer
