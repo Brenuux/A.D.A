@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bd2r5s05kv5uh"]
+[gd_scene load_steps=34 format=3 uid="uid://bd2r5s05kv5uh"]
 
 [ext_resource type="Texture2D" uid="uid://grtfiw4kn0l8" path="res://character/assets/player.png" id="2_fweo4"]
 
@@ -6,7 +6,7 @@
 script/source = "extends CharacterBody2D
 
 var _state_machine
-
+var _is_attacking: bool =false
 #variáveis
 @export_category(\"Variables\")
 @export var _move_speed: float = 64.0
@@ -17,6 +17,7 @@ var _state_machine
 
 #árvore de animações
 @export_category(\"Objects\")
+@export var _attack_timer: Timer = null
 @export var _animation_tree: AnimationTree = null
 
 #permite transitar entre animações idle e walk
@@ -26,6 +27,7 @@ func _ready() -> void:
 #função chamada a cada frame de execução do projeto 
 func _physics_process(_delta: float) -> void:
 	_move()
+	_attack()
 	_animate()
 	#permite movimento em todas as direções
 	move_and_slide()
@@ -38,8 +40,13 @@ func _move() -> void:
 	)
 	#velocidade de movimento
 	if _direction != Vector2.ZERO:
+		
+		#animação para andar 
 		_animation_tree[\"parameters/idle/blend_position\"] = _direction
 		_animation_tree[\"parameters/walk/blend_position\"] = _direction
+		#animação de ataque
+		_animation_tree[\"parameters/attack/blend_position\"] = _direction
+		
 		
 		velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
 		velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
@@ -48,14 +55,32 @@ func _move() -> void:
 	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _friction)
 	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _friction)
 
+
+#função para mudar para animação de ataque
+func _attack() -> void:
+	if Input.is_action_just_pressed(\"attack\") and _is_attacking == false:
+		set_physics_process(false)
+		_attack_timer.start()
+		_is_attacking = true
+	
 #função para definir a animação de acordo com a direção do movimento
 func _animate() -> void:
+	if _is_attacking:
+		_state_machine.travel(\"attack\")
+		return
+		
 	if velocity.length() > 2:
 		_state_machine.travel(\"walk\")
 		return
 		
 	_state_machine.travel(\"idle\")
 	pass
+
+#função para ter 0.4 de animação e depos parar
+func _on_attack_timer_timeout() -> void:
+	set_physics_process(true)
+	_is_attacking = false
+	pass 
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6m2u"]
@@ -610,10 +635,10 @@ _data = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v2s81"]
-animation = &"attack_up"
+animation = &"attack_down"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_djfei"]
-animation = &"attack_down"
+animation = &"attack_up"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g5lgq"]
 animation = &"attack_left"
@@ -677,29 +702,20 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_hq5g3")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gtu57"]
-switch_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7sawo"]
-switch_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6q4cg"]
-switch_mode = 1
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5y4k0"]
 states/End/position = Vector2(951, 171)
 states/Start/position = Vector2(540.667, 171.889)
 states/attack/node = SubResource("AnimationNodeBlendSpace2D_dp6g1")
-states/attack/position = Vector2(664, 96)
+states/attack/position = Vector2(648.79, 304)
 states/idle/node = SubResource("AnimationNodeBlendSpace2D_b0cfb")
-states/idle/position = Vector2(664, 171)
+states/idle/position = Vector2(649.926, 169.963)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_vj3rv")
-states/walk/position = Vector2(812, 171)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_gtu57"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_7sawo"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_6q4cg")]
-graph_offset = Vector2(137.022, 0)
+states/walk/position = Vector2(649.086, 237.667)
+graph_offset = Vector2(137.022, 86.0493)
 
-[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree")]
 script = SubResource("GDScript_qesar")
+_attack_timer = NodePath("AttackTimer")
 _animation_tree = NodePath("AnimationTree")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -723,6 +739,12 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_5y4k0")
 anim_player = NodePath("../Animation")
-parameters/attack/blend_position = Vector2(-0.0797912, -0.0476191)
-parameters/idle/blend_position = Vector2(0.00223708, 0.989418)
-parameters/walk/blend_position = Vector2(0, 0)
+parameters/attack/blend_position = Vector2(0, 0.964029)
+parameters/idle/blend_position = Vector2(-0.80203, -0.273381)
+parameters/walk/blend_position = Vector2(0.124365, -0.417266)
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
