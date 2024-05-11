@@ -1,0 +1,19 @@
+extends TabBar
+
+
+
+
+func _on_full_screen_toggled(toggled_on):
+	if toggled_on: #ao botão ficar ativo, vai ficar em tela cheia
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else: #ao botão ficar desativado, vai ficar em modo janela
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_borderless_toggled(toggled_on): #ao ativar ficara sem bordas
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, toggled_on)
+	
+
+
+func _on_vsync_item_selected(index):
+	DisplayServer.window_set_vsync_mode(index)

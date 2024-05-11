@@ -1,54 +1,229 @@
-[gd_scene load_steps=5 format=3 uid="uid://tctjymh2bt6h"]
+[gd_scene load_steps=9 format=3 uid="uid://bjxww27mx4bt2"]
 
-[ext_resource type="Script" path="res://menu/menu.gd" id="1_pha1f"]
-[ext_resource type="AudioStream" uid="uid://oyj14mt41v55" path="res://menu/musica_menu.mp3" id="2_4bt83"]
-[ext_resource type="Texture2D" uid="uid://ddado4wpqpsux" path="res://menu/bg_menu.jpg" id="2_cpgib"]
+[ext_resource type="Script" path="res://Video.gd" id="1_juro7"]
+[ext_resource type="Script" path="res://menu/Iniciar.gd" id="1_msjnu"]
+[ext_resource type="Script" path="res://menu/Opções.gd" id="1_prsq1"]
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_uecbf"]
+[ext_resource type="Script" path="res://menu/Audio.gd" id="2_6akf8"]
+[ext_resource type="AudioStream" uid="uid://bt7s2an3twqco" path="res://menu/msc.menu.mp3" id="2_48k3m"]
+[ext_resource type="Texture2D" uid="uid://ddado4wpqpsux" path="res://levels/scenes/bg_menu.jpg" id="2_myc04"]
+[ext_resource type="Script" path="res://menu/Voltar.gd" id="3_tyatr"]
 
-[sub_resource type="Theme" id="Theme_rc73p"]
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_uecbf")
 
-[node name="Menu" type="Control"]
-layout_mode = 3
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI"]
+position = Vector2(-1, 0)
+stream = ExtResource("2_48k3m")
+volume_db = -17.445
+autoplay = true
+bus = &"Music"
+
+[node name="Background" type="TextureRect" parent="UI"]
+texture_filter = 5
+texture_repeat = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_myc04")
+
+[node name="MainMenu" type="VBoxContainer" parent="UI"]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 79.0
+offset_right = 70.0
+offset_bottom = 180.0
+
+[node name="Iniciar" type="Button" parent="UI/MainMenu"]
+layout_mode = 2
+text = "Iniciar"
+script = ExtResource("1_msjnu")
+
+[node name="Opções" type="Button" parent="UI/MainMenu"]
+layout_mode = 2
+text = "Opções"
+script = ExtResource("1_prsq1")
+
+[node name="Sair" type="Button" parent="UI/MainMenu"]
+layout_mode = 2
+text = "Sair"
+
+[node name="Settings" type="TabContainer" parent="UI"]
+unique_name_in_owner = true
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_pha1f")
 
-[node name="Background" type="TextureRect" parent="."]
-texture_filter = 5
-texture_repeat = 2
-layout_mode = 0
-offset_right = 320.0
-offset_bottom = 180.0
-texture = ExtResource("2_cpgib")
+[node name="Video" type="TabBar" parent="UI/Settings"]
+layout_mode = 2
+script = ExtResource("1_juro7")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_4bt83")
-autoplay = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Settings/Video"]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -101.0
-offset_right = 66.0
-grow_vertical = 0
-theme = SubResource("Theme_rc73p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Settings/Video/HBoxContainer"]
 layout_mode = 2
-text = "Iniciar"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="FullScreen" type="Label" parent="UI/Settings/Video/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Opções"
+text = "Tela Cheia"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="Borderless" type="Label" parent="UI/Settings/Video/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sair"
+text = "Sem Bordas"
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="Vsync" type="Label" parent="UI/Settings/Video/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Vsync"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/Settings/Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="CheckBox" parent="UI/Settings/Video/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Borderless" type="CheckBox" parent="UI/Settings/Video/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Vsync" type="OptionButton" parent="UI/Settings/Video/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+item_count = 4
+selected = 1
+popup/item_0/text = "Desativado"
+popup/item_0/id = 0
+popup/item_1/text = "Ativado"
+popup/item_1/id = 1
+popup/item_2/text = "Adaptativo"
+popup/item_2/id = 2
+popup/item_3/text = "Mailbox"
+popup/item_3/id = 3
+
+[node name="Voltar" type="Button" parent="UI/Settings/Video"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Voltar"
+script = ExtResource("3_tyatr")
+
+[node name="_" type="TabBar" parent="UI/Settings/Video"]
+visible = false
+layout_mode = 2
+offset_top = -31.0
+offset_bottom = -31.0
+script = ExtResource("2_6akf8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Settings/Video/_"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -38.5
+offset_right = 36.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Settings/Video/_/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Principal" type="Label" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Principal"
+
+[node name="Música" type="Label" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Música"
+
+[node name="SFX" type="Label" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "SFX"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/Settings/Video/_/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Principal" type="HSlider" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+max_value = 1.0
+step = 0.05
+
+[node name="Música" type="HSlider" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+max_value = 1.0
+step = 0.05
+
+[node name="SFX" type="HSlider" parent="UI/Settings/Video/_/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+max_value = 1.0
+step = 0.05
+
+[node name="Voltar" type="Button" parent="UI/Settings/Video/_"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Voltar"
+script = ExtResource("3_tyatr")
+
+[connection signal="pressed" from="UI/MainMenu/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="UI/MainMenu/Opções" to="UI/MainMenu/Opções" method="_on_pressed"]
+[connection signal="pressed" from="UI/MainMenu/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="UI/MainMenu/Sair" to="UI/MainMenu/Sair" method="_on_pressed"]
+[connection signal="toggled" from="UI/Settings/Video/HBoxContainer/VBoxContainer2/FullScreen" to="UI/Settings/Video" method="_on_full_screen_toggled"]
+[connection signal="toggled" from="UI/Settings/Video/HBoxContainer/VBoxContainer2/Borderless" to="UI/Settings/Video" method="_on_borderless_toggled"]
+[connection signal="item_selected" from="UI/Settings/Video/HBoxContainer/VBoxContainer2/Vsync" to="UI/Settings/Video" method="_on_vsync_item_selected"]
+[connection signal="pressed" from="UI/Settings/Video/Voltar" to="UI/Settings/Video/Voltar" method="_on_pressed"]
+[connection signal="value_changed" from="UI/Settings/Video/_/HBoxContainer/VBoxContainer2/Principal" to="UI/Settings/Video/_" method="_on_principal_value_changed"]
+[connection signal="value_changed" from="UI/Settings/Video/_/HBoxContainer/VBoxContainer2/Música" to="UI/Settings/Video/_" method="_on_música_value_changed"]
+[connection signal="value_changed" from="UI/Settings/Video/_/HBoxContainer/VBoxContainer2/SFX" to="UI/Settings/Video/_" method="_on_sfx_value_changed"]
+[connection signal="pressed" from="UI/Settings/Video/_/Voltar" to="UI/Settings/Video/_/Voltar" method="_on_pressed"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bd2r5s05kv5uh" path="res://character/scenes/character.tscn" id="2_jkqxb"]
 [ext_resource type="Texture2D" uid="uid://cbmw0a1pn56nv" path="res://terrain/assets/decoration_terrain/casa.png" id="3_uqgts"]
 [ext_resource type="PackedScene" uid="uid://cvnlx88ysnha1" path="res://terrain/scenes/object_terrain.tscn" id="5_28htk"]
-[ext_resource type="AudioStream" uid="uid://dlvgmhur3kr0n" path="res://levels/level 1.mp3" id="6_q3v4s"]
+[ext_resource type="AudioStream" uid="uid://dlvgmhur3kr0n" path="res://level 1.mp3" id="6_q3v4s"]
 [ext_resource type="Texture2D" uid="uid://ci05jhssr8y5t" path="res://terrain/assets/decoration_terrain/terra.png" id="7_djwxa"]
 
 [node name="test_level_2" type="Node2D"]
@@ -45,4 +45,5 @@ layer_0/tile_data = PackedInt32Array(1114095, 1, 0, 589839, 0, 0, 851986, 0, 0, 
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_q3v4s")
+volume_db = -25.893
 autoplay = true

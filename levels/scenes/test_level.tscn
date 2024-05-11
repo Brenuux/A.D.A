@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cnnxbv70y2f6w" path="res://terrain/scenes/terrain.tscn" id="1_gpm8g"]
 [ext_resource type="PackedScene" uid="uid://bd2r5s05kv5uh" path="res://character/scenes/character.tscn" id="2_i8jlf"]
-[ext_resource type="AudioStream" uid="uid://dlvgmhur3kr0n" path="res://levels/level 1.mp3" id="3_5iw6k"]
+[ext_resource type="AudioStream" uid="uid://dlvgmhur3kr0n" path="res://level 1.mp3" id="3_5iw6k"]
+
 
 [node name="Level" type="Node2D"]
 

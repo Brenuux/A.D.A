@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://bd2r5s05kv5uh"]
+[gd_scene load_steps=36 format=3 uid="uid://bd2r5s05kv5uh"]
 
+[ext_resource type="AudioStream" uid="uid://cdnfug1vmwwck" path="res://character/swing-espada.mp3" id="1_am4eg"]
 [ext_resource type="Texture2D" uid="uid://grtfiw4kn0l8" path="res://character/assets/player.png" id="2_fweo4"]
 
 [sub_resource type="GDScript" id="GDScript_qesar"]
@@ -20,8 +21,12 @@ var _is_attacking: bool =false
 @export var _attack_timer: Timer = null
 @export var _animation_tree: AnimationTree = null
 
+
+
+
 #permite transitar entre animações idle e walk
 func _ready() -> void:
+	_animation_tree.active = true #para o animation tree ficar sempre verdadeiro
 	_state_machine = _animation_tree[\"parameters/playback\"]
 
 #função chamada a cada frame de execução do projeto 
@@ -67,6 +72,7 @@ func _attack() -> void:
 func _animate() -> void:
 	if _is_attacking:
 		_state_machine.travel(\"attack\")
+		$\"swing-espada\".play()  #quando pessonagem atacar, sai o som da espada
 		return
 		
 	if velocity.length() > 2:
@@ -80,6 +86,12 @@ func _animate() -> void:
 func _on_attack_timer_timeout() -> void:
 	set_physics_process(true)
 	_is_attacking = false
+	pass 
+
+#quando um corpo entrar na area de colissão recebera dano
+func _on_attack_area_body_entered(_body) -> void:
+	if _body.is_in_group(\"enemy\"): #todo corpo que for do grupo enimigo levara dano
+		_body.upgrade_health(randi_range(1, 5)) #enimigo vai perder de 1 a 5 de vida
 	pass 
 "
 
@@ -913,6 +925,10 @@ script = SubResource("GDScript_qesar")
 _attack_timer = NodePath("AttackTimer")
 _animation_tree = NodePath("AnimationTree")
 
+[node name="swing-espada" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_am4eg")
+volume_db = -16.41
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Texture" type="Sprite2D" parent="."]
@@ -932,6 +948,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 tree_root = SubResource("AnimationNodeStateMachine_5y4k0")
 anim_player = NodePath("../Animation")
 parameters/attack/blend_position = Vector2(0, 0.964029)
@@ -950,3 +967,4 @@ shape = SubResource("RectangleShape2D_h11tr")
 disabled = true
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
