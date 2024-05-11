@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bd2r5s05kv5uh"]
+[gd_scene load_steps=42 format=3 uid="uid://bd2r5s05kv5uh"]
 
 [ext_resource type="AudioStream" uid="uid://cdnfug1vmwwck" path="res://character/swing-espada.mp3" id="1_am4eg"]
 [ext_resource type="Texture2D" uid="uid://grtfiw4kn0l8" path="res://character/assets/player.png" id="2_fweo4"]
@@ -6,7 +6,9 @@
 [sub_resource type="GDScript" id="GDScript_qesar"]
 script/source = "extends CharacterBody2D
 
+
 var _state_machine
+var is_dead: bool = false
 var _is_attacking: bool =false
 #variáveis
 @export_category(\"Variables\")
@@ -31,6 +33,9 @@ func _ready() -> void:
 
 #função chamada a cada frame de execução do projeto 
 func _physics_process(_delta: float) -> void:
+	if is_dead:
+		return
+		
 	_move()
 	_attack()
 	_animate()
@@ -70,6 +75,9 @@ func _attack() -> void:
 	
 #função para definir a animação de acordo com a direção do movimento
 func _animate() -> void:
+	
+		
+		
 	if _is_attacking:
 		_state_machine.travel(\"attack\")
 		$\"swing-espada\".play()  #quando pessonagem atacar, sai o som da espada
@@ -93,6 +101,10 @@ func _on_attack_area_body_entered(_body) -> void:
 	if _body.is_in_group(\"enemy\"): #todo corpo que for do grupo enimigo levara dano
 		_body.upgrade_health(randi_range(1, 5)) #enimigo vai perder de 1 a 5 de vida
 	pass 
+
+func die() -> void:
+	is_dead = true
+	_state_machine.travel(\"death\")
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6m2u"]
@@ -493,7 +505,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, -10)]
+"values": [Vector2(0, -16)]
 }
 
 [sub_resource type="Animation" id="Animation_7wiha"]
@@ -824,6 +836,22 @@ tracks/2/keys = {
 "values": [false, false]
 }
 
+[sub_resource type="Animation" id="Animation_ic16m"]
+resource_name = "death"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hyvt4"]
 _data = {
 "RESET": SubResource("Animation_jblsy"),
@@ -831,6 +859,7 @@ _data = {
 "attack_left": SubResource("Animation_s5hav"),
 "attack_right": SubResource("Animation_p0buv"),
 "attack_up": SubResource("Animation_yjmd4"),
+"death": SubResource("Animation_ic16m"),
 "idle_down": SubResource("Animation_7wiha"),
 "idle_left": SubResource("Animation_yu0r6"),
 "idle_right": SubResource("Animation_dc8ex"),
@@ -862,6 +891,29 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_g5lgq")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_g0j55")
 blend_point_3/pos = Vector2(1, 0)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kbo4v"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uppls"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_url3l"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kqwk4"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_j5xe3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_kbo4v")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_uppls")
+blend_point_1/pos = Vector2(0, 0.9)
+blend_point_2/node = SubResource("AnimationNodeAnimation_url3l")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_kqwk4")
+blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wl7pc"]
 animation = &"idle_down"
@@ -914,13 +966,15 @@ states/End/position = Vector2(951, 171)
 states/Start/position = Vector2(540.667, 171.889)
 states/attack/node = SubResource("AnimationNodeBlendSpace2D_dp6g1")
 states/attack/position = Vector2(648.79, 304)
+states/death/node = SubResource("AnimationNodeBlendSpace2D_j5xe3")
+states/death/position = Vector2(649.157, 374.716)
 states/idle/node = SubResource("AnimationNodeBlendSpace2D_b0cfb")
 states/idle/position = Vector2(649.926, 169.963)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_vj3rv")
 states/walk/position = Vector2(649.086, 237.667)
-graph_offset = Vector2(137.022, 86.0493)
+graph_offset = Vector2(137.022, 225.282)
 
-[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree")]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree") groups=["character"]]
 script = SubResource("GDScript_qesar")
 _attack_timer = NodePath("AttackTimer")
 _animation_tree = NodePath("AnimationTree")
@@ -952,6 +1006,7 @@ active = false
 tree_root = SubResource("AnimationNodeStateMachine_5y4k0")
 anim_player = NodePath("../Animation")
 parameters/attack/blend_position = Vector2(0, 0.964029)
+parameters/death/blend_position = Vector2(0.992357, -0.016)
 parameters/idle/blend_position = Vector2(-0.80203, -0.273381)
 parameters/walk/blend_position = Vector2(0.124365, -0.417266)
 

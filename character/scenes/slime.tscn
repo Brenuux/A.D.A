@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://tj8mo0xqj76h"]
+
+[ext_resource type="Script" path="res://character/scripts/slime.gd" id="1_ipc3q"]
+[ext_resource type="Texture2D" uid="uid://bufpfs83qix54" path="res://character/assets/slime.png" id="2_k3xk7"]
+
+[sub_resource type="Animation" id="Animation_prh7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5ncs4"]
+resource_name = "death"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [28, 29, 30, 31]
+}
+
+[sub_resource type="Animation" id="Animation_re8ur"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_ekyjk"]
+resource_name = "walker"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i8gdb"]
+_data = {
+"RESET": SubResource("Animation_prh7j"),
+"death": SubResource("Animation_5ncs4"),
+"idle": SubResource("Animation_re8ur"),
+"walker": SubResource("Animation_ekyjk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yi6yk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lg2ta"]
+radius = 98.0051
+
+[node name="Slime" type="CharacterBody2D" node_paths=PackedStringArray("_texture", "_animation")]
+script = ExtResource("1_ipc3q")
+_texture = NodePath("Texture")
+_animation = NodePath("AnimationPlayer")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("2_k3xk7")
+hframes = 7
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i8gdb")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+shape = SubResource("RectangleShape2D_yi6yk")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+visible = false
+
+[node name="Collision" type="CollisionShape2D" parent="DetectionArea"]
+show_behind_parent = true
+shape = SubResource("CircleShape2D_lg2ta")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

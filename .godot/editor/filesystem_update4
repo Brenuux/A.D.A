@@ -1,4 +1,5 @@
-res://menu/menu.tscn
-res://menu/menu.gd
 res://character/scenes/character.tscn
+res://menu/menu.tscn
 res://levels/scenes/test_level_2.tscn
+res://character/scenes/slime.tscn
+res://character/scripts/slime.gd
