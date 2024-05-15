@@ -1,5 +1,7 @@
+res://terrain/scenes/terrain.tscn
+res://terrain/scenes/object_terrain.tscn
+res://levels/scenes/casa.tscn
 res://character/scenes/character.tscn
+res://character/scenes/slime.tscn
 res://menu/menu.tscn
 res://levels/scenes/test_level_2.tscn
-res://character/scenes/slime.tscn
-res://character/scripts/slime.gd
