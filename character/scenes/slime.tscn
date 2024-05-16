@@ -84,14 +84,14 @@ radius = 98.0051
 [node name="Slime" type="CharacterBody2D" node_paths=PackedStringArray("_texture", "_animation")]
 script = ExtResource("1_ipc3q")
 _texture = NodePath("Texture")
-_animation = NodePath("AnimationPlayer")
+_animation = NodePath("Animation")
 
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("2_k3xk7")
 hframes = 7
 vframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_i8gdb")
 }

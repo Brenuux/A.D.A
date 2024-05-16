@@ -1,7 +1,9 @@
 extends CharacterBody2D
 class_name Slime
 
+var _is_dead: bool = false
 var _player_ref = null
+
 
 @export_category("Objects")
 @export var _texture: Sprite2D = null
@@ -21,6 +23,9 @@ func _on_detection_area_body_exited(_body):
 		_player_ref = null
 	
 func _physics_process(_delta: float) -> void:
+	if _is_dead:
+		return
+		
 	_animate()
 	if _player_ref != null:
 		if _player_ref.is_dead:
@@ -52,3 +57,10 @@ func _animate() -> void:
 		return
 		
 	_animation.play("idle")
+
+func update_health() -> void:
+	_is_dead = true
+	_animation.play("death")
+
+func _on_animation_finished(_anim_name: String) -> void:
+	queue_free()

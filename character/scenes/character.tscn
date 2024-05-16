@@ -5,7 +5,7 @@
 
 [sub_resource type="GDScript" id="GDScript_qesar"]
 script/source = "extends CharacterBody2D
-
+class_name Character
 
 var _state_machine
 var is_dead: bool = false
@@ -99,12 +99,14 @@ func _on_attack_timer_timeout() -> void:
 #quando um corpo entrar na area de colissão recebera dano
 func _on_attack_area_body_entered(_body) -> void:
 	if _body.is_in_group(\"enemy\"): #todo corpo que for do grupo enimigo levara dano
-		_body.upgrade_health(randi_range(1, 5)) #enimigo vai perder de 1 a 5 de vida
-	pass 
+		_body.upgrade_health() #enimigo vai perder de 1 a 5 de vida
 
 func die() -> void:
 	is_dead = true
 	_state_machine.travel(\"death\")
+	#o codigo espera a ação de morte, e caso aconteça, reinicia a scena
+	await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6m2u"]
