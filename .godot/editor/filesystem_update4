@@ -1,9 +1,3 @@
-res://terrain/scenes/object_terrain.tscn
-res://levels/scenes/inicio.tscn
 res://character/scenes/character.tscn
-res://character/scenes/slime.tscn
-res://components/door_provisoria/scenes/door_componet.tscn
-res://levels/scenes/casa.tscn
-res://terrain/scenes/terrain.tscn
-res://menu/menu.tscn
-res://menu/menu.gd
+res://bosses/golem_stone_boss/golem_boss.tscn
+res://levels/scenes/state.gd
