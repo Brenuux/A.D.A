@@ -1,3 +1,12 @@
-res://character/scenes/character.tscn
 res://bosses/golem_stone_boss/golem_boss.tscn
+res://bosses/golem_stone_boss/FiniteStateMachine.gd
+res://levels/scenes/boss_room.tscn
+res://character/scenes/character.tscn
+res://character/scenes/slime.tscn
+res://components/door_provisoria/scenes/door_componet.tscn
+res://terrain/scenes/terrain.tscn
+res://terrain/scenes/object_terrain.tscn
+res://menu/menu.tscn
+res://levels/scenes/inicio.tscn
+res://levels/scenes/casa.tscn
 res://levels/scenes/state.gd

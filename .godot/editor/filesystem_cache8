@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717692717
+::res://::1717761582
 default_bus_layout.tres::AudioBusLayout::8278133541251888894::1717690800::0::1::::<><>::
 icon.svg::CompressedTexture2D::410593426708531139::1717690800::1717690800::1::::<><>::
 level 1.mp3::AudioStreamMP3::7975077394786144723::1717690800::1717690800::1::::<><>::
 Video.gd::GDScript::-1::1717690800::0::1::::<>TabBar<>::
 ::res://bosses/::1717690800
-::res://bosses/golem_stone_boss/::1717690800
+::res://bosses/golem_stone_boss/::1717761559
+golem_boss.tscn::PackedScene::326160731088440217::1717761559::0::1::::<><>::uid://dw1njvwpqtvj3::::res://bosses/golem_stone_boss/sprite/Character_sheet.png<>uid://c4qnx7hrj3ub6::::res://bosses/golem_stone_boss/projectile/Laser_sheet.png
 ::res://bosses/golem_stone_boss/ASE files/::1717690800
 ::res://bosses/golem_stone_boss/projectile/::1717690800
 arm_projectile.png::CompressedTexture2D::1471443856992907866::1717690800::1717690800::1::::<><>::
@@ -18,8 +19,8 @@ swing-espada.mp3::AudioStreamMP3::5010584466221092406::1717690800::1717690800::1
 ::res://character/assets/::1717690800
 player.png::CompressedTexture2D::457390490983327011::1717690800::1717690800::1::::<><>::
 slime.png::CompressedTexture2D::3801440126777832693::1717690800::1717690800::1::::<><>::
-::res://character/scenes/::1717690800
-character.tscn::PackedScene::2653812162078688751::1717690800::0::1::::<><>::uid://cdnfug1vmwwck::::res://character/swing-espada.mp3<>uid://grtfiw4kn0l8::::res://character/assets/player.png
+::res://character/scenes/::1717696207
+character.tscn::PackedScene::2653812162078688751::1717696207::0::1::::<><>::uid://cdnfug1vmwwck::::res://character/swing-espada.mp3<>uid://grtfiw4kn0l8::::res://character/assets/player.png
 slime.tscn::PackedScene::1354193294211105677::1717690800::0::1::::<><>::res://character/scripts/slime.gd<>uid://bufpfs83qix54::::res://character/assets/slime.png
 ::res://character/scripts/::1717690800
 character.gd::GDScript::-1::1717690800::0::1::::<>CharacterBody2D<>::
@@ -31,10 +32,11 @@ door_componet.tscn::PackedScene::739029787723755356::1717690800::0::1::::<><>::r
 ::res://components/door_provisoria/scripts/::1717690800
 door_componet.gd::GDScript::-1::1717690800::0::1::::DoorComponet<>Area2D<>::
 ::res://levels/::1717690800
-::res://levels/scenes/::1717690800
+::res://levels/scenes/::1717761559
 bg_menu.jpg::CompressedTexture2D::7370037291952743391::1717690800::1717690800::1::::<><>::
 casa.tscn::PackedScene::7538899494550032691::1717690800::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn
 inicio.tscn::PackedScene::1632532119950961789::1717690800::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn<>uid://cbmw0a1pn56nv::::res://terrain/assets/decoration_terrain/casa.png<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://dlvgmhur3kr0n::::res://level 1.mp3<>uid://tj8mo0xqj76h::::res://character/scenes/slime.tscn<>uid://ci05jhssr8y5t::::res://terrain/assets/decoration_terrain/terra.png<>uid://kr8yh2hnuydg::::res://components/door_provisoria/scenes/door_componet.tscn
+state.gd::GDScript::-1::1717761559::0::1::::State<>Node2D<>::
 ::res://menu/::1717690800
 Audio.gd::GDScript::-1::1717690800::0::1::::<>TabBar<>::
 Iniciar.gd::GDScript::-1::1717690800::0::1::::<>Button<>::
