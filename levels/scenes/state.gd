@@ -16,10 +16,3 @@ func exit():
 
 func transition():
 	pass
-
-func _physics_process(_delta):
-	transition()
-	if debug != null:
-		debug.text = name
-	else:
-		print("Nó debug não encontrado!")

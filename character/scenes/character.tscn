@@ -976,7 +976,7 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_vj3rv")
 states/walk/position = Vector2(649.086, 237.667)
 graph_offset = Vector2(137.022, 225.282)
 
-[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree") groups=["character"]]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree") groups=["character"]]
 script = SubResource("GDScript_qesar")
 _attack_timer = NodePath("AttackTimer")
 _animation_tree = NodePath("AnimationTree")

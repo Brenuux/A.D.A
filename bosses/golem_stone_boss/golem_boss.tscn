@@ -1,9 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://ev824pdocn0d"]
+[gd_scene load_steps=27 format=3 uid="uid://ev824pdocn0d"]
 
 [ext_resource type="Texture2D" uid="uid://dw1njvwpqtvj3" path="res://bosses/golem_stone_boss/sprite/Character_sheet.png" id="1_junqq"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/golem_boss.gd" id="1_r2nrs"]
 [ext_resource type="Texture2D" uid="uid://c4qnx7hrj3ub6" path="res://bosses/golem_stone_boss/projectile/Laser_sheet.png" id="2_pj0pm"]
 [ext_resource type="Script" path="res://bosses/golem_stone_boss/FiniteStateMachine.gd" id="3_j77ae"]
 [ext_resource type="Script" path="res://levels/scenes/state.gd" id="4_ayxan"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/Idle.gd" id="4_m3bdr"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/Follow.gd" id="5_o2nti"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/MeleeAttack.gd" id="7_uj5oi"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/HomingMissile.gd" id="8_hrq6j"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/LaserBeam.gd" id="9_4dcux"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/ArmorBuff.gd" id="10_dub80"]
+[ext_resource type="Script" path="res://bosses/golem_stone_boss/Dash.gd" id="10_xgevc"]
 
 [sub_resource type="Animation" id="Animation_tb3kl"]
 length = 0.001
@@ -220,6 +228,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 0]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FiniteStateMachine/LaserBeam")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"set_target"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_gn4f7"]
 resource_name = "laser_cast"
@@ -334,6 +356,7 @@ radius = 100.0
 [node name="GolemBoss" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 0
+script = ExtResource("1_r2nrs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 hframes = 10
@@ -426,25 +449,27 @@ shape = SubResource("CircleShape2D_hul0j")
 script = ExtResource("3_j77ae")
 
 [node name="Idle" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("4_m3bdr")
 
 [node name="Follow" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("5_o2nti")
 
 [node name="MeleeAttack" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("7_uj5oi")
 
 [node name="HomingMissile" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("8_hrq6j")
 
 [node name="LaserBeam" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("9_4dcux")
 
 [node name="ArmorBuff" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("10_dub80")
 
 [node name="Dash" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_ayxan")
+script = ExtResource("10_xgevc")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("4_ayxan")
+
+[connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
