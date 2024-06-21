@@ -1,10 +1,10 @@
 res://character/scenes
+res://terrain/scenes
 res://bosses/golem_stone_boss/projectile
 res://bosses
 res://levels/scenes
 res://bosses/golem_stone_boss
 res://menu
-res://terrain/scenes
 res://levels
 res://terrain/assets/base_terrain
 res://

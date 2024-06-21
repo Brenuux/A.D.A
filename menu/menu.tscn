@@ -17,7 +17,7 @@ script = ExtResource("1_uecbf")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI"]
 position = Vector2(-1, 0)
 stream = ExtResource("2_48k3m")
-volume_db = -17.445
+volume_db = 0.034
 autoplay = true
 bus = &"Music"
 
