@@ -1,95 +1,95 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718975076
-default_bus_layout.tres::AudioBusLayout::8278133541251888894::1718211622::0::1::::<><>::
-icon.svg::CompressedTexture2D::410593426708531139::1718211622::1718211622::1::::<><>::
-level 1.mp3::AudioStreamMP3::7975077394786144723::1718211622::1718211622::1::::<><>::
-Video.gd::GDScript::-1::1718211622::0::1::::<>TabBar<>::
-::res://bosses/::1718967000
-bullet.gd::GDScript::-1::1718213442::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::3485751034634090156::1718967000::0::1::::<><>::res://bosses/bullet.gd<>uid://b63wyi140uq7q::::res://bosses/golem_stone_boss/projectile/arm_projectile_glowing.png
-::res://bosses/golem_stone_boss/::1718971513
-ArmorBuff.gd::GDScript::-1::1718214387::0::1::::<>State<>::
-Dash.gd::GDScript::-1::1718213927::0::1::::<>State<>::
-FiniteStateMachine.gd::GDScript::-1::1718211622::0::1::::<>Node2D<>::
-Follow.gd::GDScript::-1::1718212301::0::1::::<>State<>::
-golem_boss.gd::GDScript::-1::1718215881::0::1::::<>CharacterBody2D<>::
-golem_boss.tscn::PackedScene::326160731088440217::1718967000::0::1::::<><>::uid://dw1njvwpqtvj3::::res://bosses/golem_stone_boss/sprite/Character_sheet.png<>res://bosses/golem_stone_boss/golem_boss.gd<>uid://c4qnx7hrj3ub6::::res://bosses/golem_stone_boss/projectile/Laser_sheet.png<>res://bosses/golem_stone_boss/FiniteStateMachine.gd<>res://levels/scenes/state.gd<>res://bosses/golem_stone_boss/Idle.gd<>res://bosses/golem_stone_boss/Follow.gd<>res://bosses/golem_stone_boss/MeleeAttack.gd<>res://bosses/golem_stone_boss/HomingMissile.gd<>res://bosses/golem_stone_boss/LaserBeam.gd<>res://bosses/golem_stone_boss/ArmorBuff.gd<>res://bosses/golem_stone_boss/Dash.gd
-HomingMissile.gd::GDScript::-1::1718212688::0::1::::<>State<>::
-Idle.gd::GDScript::-1::1718215333::0::1::::<>State<>::
-LaserBeam.gd::GDScript::-1::1718214052::0::1::::<>State<>::
-MeleeAttack.gd::GDScript::-1::1718971513::0::1::::<>State<>::
-::res://bosses/golem_stone_boss/ASE files/::1718211622
-::res://bosses/golem_stone_boss/projectile/::1718211622
-arm_projectile.png::CompressedTexture2D::1471443856992907866::1718211622::1718211622::1::::<><>::
-arm_projectile_glowing.png::CompressedTexture2D::4621456508183915744::1718211622::1718211622::1::::<><>::
-Laser_sheet.png::CompressedTexture2D::6842179963466262753::1718211622::1718211622::1::::<><>::
-::res://bosses/golem_stone_boss/sprite/::1718211622
-Character_sheet.png::CompressedTexture2D::8757896963452412186::1718211622::1718211622::1::::<><>::
-::res://character/::1718211622
-swing-espada.mp3::AudioStreamMP3::5010584466221092406::1718211622::1718211622::1::::<><>::
-::res://character/assets/::1718211622
-player.png::CompressedTexture2D::457390490983327011::1718211622::1718211622::1::::<><>::
-slime.png::CompressedTexture2D::3801440126777832693::1718211622::1718211622::1::::<><>::
-::res://character/scenes/::1718974949
-character.tscn::PackedScene::2653812162078688751::1718974949::0::1::::<><>::uid://cdnfug1vmwwck::::res://character/swing-espada.mp3<>uid://grtfiw4kn0l8::::res://character/assets/player.png
-slime.tscn::PackedScene::1354193294211105677::1718974949::0::1::::<><>::res://character/scripts/slime.gd<>uid://bufpfs83qix54::::res://character/assets/slime.png
-::res://character/scripts/::1718974683
-character.gd::GDScript::-1::1718974471::0::1::::<>CharacterBody2D<>::
-slime.gd::GDScript::-1::1718974471::0::1::::Slime<>CharacterBody2D<>::
-::res://components/::1718211622
-::res://components/door_provisoria/::1718211622
-::res://components/door_provisoria/scenes/::1718214495
-door_componet.tscn::PackedScene::739029787723755356::1718214495::0::1::::<><>::res://components/door_provisoria/scripts/door_componet.gd<>uid://r3j7d4w8cs6y::::res://terrain/assets/decoration_terrain/grama.png
-::res://components/door_provisoria/scripts/::1718653133
-door_componet.gd::GDScript::-1::1718653133::0::1::::DoorComponet<>Area2D<>::
-::res://levels/::1718211622
-::res://levels/scenes/::1718975028
-bg_menu.jpg::CompressedTexture2D::7370037291952743391::1718211622::1718211622::1::::<><>::
-boss_room.tscn::PackedScene::6508510050766071973::1718967000::0::1::::<><>::uid://ev824pdocn0d::::res://bosses/golem_stone_boss/golem_boss.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn
-casa.tscn::PackedScene::7538899494550032691::1718974949::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn
-inicio.tscn::PackedScene::1632532119950961789::1718975028::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://dlvgmhur3kr0n::::res://level 1.mp3<>uid://tj8mo0xqj76h::::res://character/scenes/slime.tscn<>uid://ci05jhssr8y5t::::res://terrain/assets/decoration_terrain/terra.png<>uid://c7p7w5tryr7fi::::res://terrain/assets/decoration_terrain/flor.png
-state.gd::GDScript::-1::1718211955::0::1::::State<>Node2D<>::
-::res://menu/::1718974949
-Audio.gd::GDScript::-1::1718211622::0::1::::<>TabBar<>::
-Iniciar.gd::GDScript::-1::1718211622::0::1::::<>Button<>::
-menu.gd::GDScript::-1::1718211622::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::3066977494226834941::1718974949::0::1::::<><>::res://Video.gd<>res://menu/Iniciar.gd<>res://menu/Opções.gd<>res://menu/menu.gd<>res://menu/Audio.gd<>uid://bt7s2an3twqco::::res://menu/msc.menu.mp3<>uid://ddado4wpqpsux::::res://levels/scenes/bg_menu.jpg<>res://menu/Voltar.gd
-msc.menu.mp3::AudioStreamMP3::3787209944631780658::1718211622::1718211622::1::::<><>::
-Opções.gd::GDScript::-1::1718211622::0::1::::<>Button<>::
-Sair.gd::GDScript::-1::1718211622::0::1::::<>RefCounted<>::
-Voltar.gd::GDScript::-1::1718211622::0::1::::<>Button<>::
-::res://terrain/::1718211622
-::res://terrain/assets/::1718211622
-::res://terrain/assets/base_terrain/::1718211622
-dark_plains.png::CompressedTexture2D::8491226042761735388::1718211622::1718211622::1::::<><>::
-plains.png::CompressedTexture2D::2788462067424554260::1718211622::1718211622::1::::<><>::
-TopDownHouse_DoorsAndWindows.png::CompressedTexture2D::3620659061095057818::1718211622::1718211622::1::::<><>::
-TopDownHouse_FloorsAndWalls.png::CompressedTexture2D::2408261562662470958::1718211622::1718211622::1::::<><>::
-::res://terrain/assets/decoration_terrain/::1718211622
-arbusto baixo.png::CompressedTexture2D::1398289116949177682::1718211622::1718211622::1::::<><>::
-arbusto.png::CompressedTexture2D::3293209242843459040::1718211622::1718211622::1::::<><>::
-arbusto_dark.png::CompressedTexture2D::5450600658700470703::1718211622::1718211622::1::::<><>::
-arvore 1.png::CompressedTexture2D::3899960029808984045::1718211622::1718211622::1::::<><>::
-arvore_dark.png::CompressedTexture2D::1056595658118775965::1718211622::1718211622::1::::<><>::
-bau.png::CompressedTexture2D::1014933210483446130::1718211622::1718211622::1::::<><>::
-casa.png::CompressedTexture2D::4869183203626470379::1718211622::1718211622::1::::<><>::
-flor.png::CompressedTexture2D::7051833867205537434::1718211622::1718211622::1::::<><>::
-grama.png::CompressedTexture2D::1251616720713236510::1718211622::1718211622::1::::<><>::
-grama_dark.png::CompressedTexture2D::653317797200962650::1718211622::1718211622::1::::<><>::
-pedra grama.png::CompressedTexture2D::7782542382282429232::1718211622::1718211622::1::::<><>::
-pedra.png::CompressedTexture2D::5856903810444086835::1718211622::1718211622::1::::<><>::
-pedra_dark.png::CompressedTexture2D::3564854515899201081::1718211622::1718211622::1::::<><>::
-placa 2.png::CompressedTexture2D::4475684651548339886::1718211622::1718211622::1::::<><>::
-placa 3.png::CompressedTexture2D::6219981049215659367::1718211622::1718211622::1::::<><>::
-placa para texto.png::CompressedTexture2D::7819262707264085213::1718211622::1718211622::1::::<><>::
-placa.png::CompressedTexture2D::5677808563054845867::1718211622::1718211622::1::::<><>::
-terra.png::CompressedTexture2D::5387799538581905223::1718211622::1718211622::1::::<><>::
-TopDownHouse_FurnitureState1.png::CompressedTexture2D::855475795844228565::1718211622::1718211622::1::::<><>::
-TopDownHouse_FurnitureState2.png::CompressedTexture2D::5474338920637335130::1718211622::1718211622::1::::<><>::
-TopDownHouse_SmallItems.png::CompressedTexture2D::5612746672226393005::1718211622::1718211622::1::::<><>::
-::res://terrain/scenes/::1718974950
-object_terrain.tscn::PackedScene::6274354740132026750::1718974950::0::1::::<><>::uid://pb28gnmren46::::res://terrain/assets/decoration_terrain/arvore_dark.png<>uid://opv2i00kkmwg::::res://terrain/assets/decoration_terrain/bau.png<>uid://bq13vr2g7nfft::::res://terrain/assets/decoration_terrain/pedra_dark.png<>uid://jkqbwi5drxd7::::res://terrain/assets/decoration_terrain/grama_dark.png<>uid://cjwkujtcsnyu6::::res://terrain/assets/decoration_terrain/arbusto_dark.png<>uid://cuvagdcr3qo3x::::res://terrain/assets/decoration_terrain/placa 3.png<>uid://brt4yw76viexm::::res://terrain/assets/base_terrain/TopDownHouse_DoorsAndWindows.png<>uid://cj82td6gdjqis::::res://terrain/assets/decoration_terrain/TopDownHouse_FurnitureState2.png<>uid://cbmw0a1pn56nv::::res://terrain/assets/decoration_terrain/casa.png
-terrain.tscn::PackedScene::5713532675704053824::1718974949::0::1::::<><>::uid://ds8hitx840k65::::res://terrain/assets/base_terrain/dark_plains.png<>uid://brt4yw76viexm::::res://terrain/assets/base_terrain/TopDownHouse_DoorsAndWindows.png<>uid://baktyl2bammb3::::res://terrain/assets/base_terrain/TopDownHouse_FloorsAndWalls.png<>uid://bfy0tewkfjmw7::::res://terrain/assets/base_terrain/plains.png
-::res://test_placa/::1718211622
-bg.jpg::CompressedTexture2D::5517888656361908433::1718211622::1718211622::1::::<><>::
-Dialog_Box.png::CompressedTexture2D::1254085066224916227::1718211622::1718211622::1::::<><>::
+::res://::1718977289
+default_bus_layout.tres::AudioBusLayout::8278133541251888894::1718977275::0::1::::<><>::
+icon.svg::CompressedTexture2D::410593426708531139::1718977275::1718977275::1::::<><>::
+level 1.mp3::AudioStreamMP3::7975077394786144723::1718977275::1718977275::1::::<><>::
+Video.gd::GDScript::-1::1718977275::0::1::::<>TabBar<>::
+::res://bosses/::1718977275
+bullet.gd::GDScript::-1::1718977275::0::1::::<>Area2D<>::
+bullet.tscn::PackedScene::3485751034634090156::1718977275::0::1::::<><>::res://bosses/bullet.gd<>uid://b63wyi140uq7q::::res://bosses/golem_stone_boss/projectile/arm_projectile_glowing.png
+::res://bosses/golem_stone_boss/::1718977275
+ArmorBuff.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+Dash.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+FiniteStateMachine.gd::GDScript::-1::1718977275::0::1::::<>Node2D<>::
+Follow.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+golem_boss.gd::GDScript::-1::1718977275::0::1::::<>CharacterBody2D<>::
+golem_boss.tscn::PackedScene::326160731088440217::1718977275::0::1::::<><>::uid://dw1njvwpqtvj3::::res://bosses/golem_stone_boss/sprite/Character_sheet.png<>res://bosses/golem_stone_boss/golem_boss.gd<>uid://c4qnx7hrj3ub6::::res://bosses/golem_stone_boss/projectile/Laser_sheet.png<>res://bosses/golem_stone_boss/FiniteStateMachine.gd<>res://levels/scenes/state.gd<>res://bosses/golem_stone_boss/Idle.gd<>res://bosses/golem_stone_boss/Follow.gd<>res://bosses/golem_stone_boss/MeleeAttack.gd<>res://bosses/golem_stone_boss/HomingMissile.gd<>res://bosses/golem_stone_boss/LaserBeam.gd<>res://bosses/golem_stone_boss/ArmorBuff.gd<>res://bosses/golem_stone_boss/Dash.gd
+HomingMissile.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+Idle.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+LaserBeam.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+MeleeAttack.gd::GDScript::-1::1718977275::0::1::::<>State<>::
+::res://bosses/golem_stone_boss/ASE files/::1718977275
+::res://bosses/golem_stone_boss/projectile/::1718977275
+arm_projectile.png::CompressedTexture2D::1471443856992907866::1718977275::1718977275::1::::<><>::
+arm_projectile_glowing.png::CompressedTexture2D::4621456508183915744::1718977275::1718977275::1::::<><>::
+Laser_sheet.png::CompressedTexture2D::6842179963466262753::1718977275::1718977275::1::::<><>::
+::res://bosses/golem_stone_boss/sprite/::1718977275
+Character_sheet.png::CompressedTexture2D::8757896963452412186::1718977275::1718977275::1::::<><>::
+::res://character/::1718977275
+swing-espada.mp3::AudioStreamMP3::5010584466221092406::1718977275::1718977275::1::::<><>::
+::res://character/assets/::1718977275
+player.png::CompressedTexture2D::457390490983327011::1718977275::1718977275::1::::<><>::
+slime.png::CompressedTexture2D::3801440126777832693::1718977275::1718977275::1::::<><>::
+::res://character/scenes/::1718977275
+character.tscn::PackedScene::2653812162078688751::1718977275::0::1::::<><>::uid://cdnfug1vmwwck::::res://character/swing-espada.mp3<>uid://grtfiw4kn0l8::::res://character/assets/player.png
+slime.tscn::PackedScene::1354193294211105677::1718977275::0::1::::<><>::res://character/scripts/slime.gd<>uid://bufpfs83qix54::::res://character/assets/slime.png
+::res://character/scripts/::1718977275
+character.gd::GDScript::-1::1718977275::0::1::::Player<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1718977275::0::1::::Slime<>CharacterBody2D<>::
+::res://components/::1718977275
+::res://components/door_provisoria/::1718977275
+::res://components/door_provisoria/scenes/::1718977275
+door_componet.tscn::PackedScene::739029787723755356::1718977275::0::1::::<><>::res://components/door_provisoria/scripts/door_componet.gd<>uid://r3j7d4w8cs6y::::res://terrain/assets/decoration_terrain/grama.png
+::res://components/door_provisoria/scripts/::1718977275
+door_componet.gd::GDScript::-1::1718977275::0::1::::DoorComponet<>Area2D<>::
+::res://levels/::1718977275
+::res://levels/scenes/::1718977275
+bg_menu.jpg::CompressedTexture2D::7370037291952743391::1718977275::1718977275::1::::<><>::
+boss_room.tscn::PackedScene::6508510050766071973::1718977275::0::1::::<><>::uid://ev824pdocn0d::::res://bosses/golem_stone_boss/golem_boss.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn
+casa.tscn::PackedScene::7538899494550032691::1718977275::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn
+inicio.tscn::PackedScene::1632532119950961789::1718977275::0::1::::<><>::uid://cnnxbv70y2f6w::::res://terrain/scenes/terrain.tscn<>uid://bd2r5s05kv5uh::::res://character/scenes/character.tscn<>uid://cvnlx88ysnha1::::res://terrain/scenes/object_terrain.tscn<>uid://dlvgmhur3kr0n::::res://level 1.mp3<>uid://tj8mo0xqj76h::::res://character/scenes/slime.tscn<>uid://ci05jhssr8y5t::::res://terrain/assets/decoration_terrain/terra.png<>uid://c7p7w5tryr7fi::::res://terrain/assets/decoration_terrain/flor.png
+state.gd::GDScript::-1::1718977275::0::1::::State<>Node2D<>::
+::res://menu/::1718977275
+Audio.gd::GDScript::-1::1718977275::0::1::::<>TabBar<>::
+Iniciar.gd::GDScript::-1::1718977275::0::1::::<>Button<>::
+menu.gd::GDScript::-1::1718977275::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::3066977494226834941::1718977275::0::1::::<><>::res://Video.gd<>res://menu/Iniciar.gd<>res://menu/Opções.gd<>res://menu/menu.gd<>res://menu/Audio.gd<>uid://bt7s2an3twqco::::res://menu/msc.menu.mp3<>uid://ddado4wpqpsux::::res://levels/scenes/bg_menu.jpg<>res://menu/Voltar.gd
+msc.menu.mp3::AudioStreamMP3::3787209944631780658::1718977275::1718977275::1::::<><>::
+Opções.gd::GDScript::-1::1718977275::0::1::::<>Button<>::
+Sair.gd::GDScript::-1::1718977275::0::1::::<>RefCounted<>::
+Voltar.gd::GDScript::-1::1718977275::0::1::::<>Button<>::
+::res://terrain/::1718977275
+::res://terrain/assets/::1718977275
+::res://terrain/assets/base_terrain/::1718977275
+dark_plains.png::CompressedTexture2D::8491226042761735388::1718977275::1718977275::1::::<><>::
+plains.png::CompressedTexture2D::2788462067424554260::1718977275::1718977275::1::::<><>::
+TopDownHouse_DoorsAndWindows.png::CompressedTexture2D::3620659061095057818::1718977275::1718977275::1::::<><>::
+TopDownHouse_FloorsAndWalls.png::CompressedTexture2D::2408261562662470958::1718977275::1718977275::1::::<><>::
+::res://terrain/assets/decoration_terrain/::1718977275
+arbusto baixo.png::CompressedTexture2D::1398289116949177682::1718977275::1718977275::1::::<><>::
+arbusto.png::CompressedTexture2D::3293209242843459040::1718977275::1718977275::1::::<><>::
+arbusto_dark.png::CompressedTexture2D::5450600658700470703::1718977275::1718977275::1::::<><>::
+arvore 1.png::CompressedTexture2D::3899960029808984045::1718977275::1718977275::1::::<><>::
+arvore_dark.png::CompressedTexture2D::1056595658118775965::1718977275::1718977275::1::::<><>::
+bau.png::CompressedTexture2D::1014933210483446130::1718977275::1718977275::1::::<><>::
+casa.png::CompressedTexture2D::4869183203626470379::1718977275::1718977275::1::::<><>::
+flor.png::CompressedTexture2D::7051833867205537434::1718977275::1718977275::1::::<><>::
+grama.png::CompressedTexture2D::1251616720713236510::1718977275::1718977275::1::::<><>::
+grama_dark.png::CompressedTexture2D::653317797200962650::1718977275::1718977275::1::::<><>::
+pedra grama.png::CompressedTexture2D::7782542382282429232::1718977275::1718977275::1::::<><>::
+pedra.png::CompressedTexture2D::5856903810444086835::1718977275::1718977275::1::::<><>::
+pedra_dark.png::CompressedTexture2D::3564854515899201081::1718977275::1718977275::1::::<><>::
+placa 2.png::CompressedTexture2D::4475684651548339886::1718977275::1718977275::1::::<><>::
+placa 3.png::CompressedTexture2D::6219981049215659367::1718977275::1718977275::1::::<><>::
+placa para texto.png::CompressedTexture2D::7819262707264085213::1718977275::1718977275::1::::<><>::
+placa.png::CompressedTexture2D::5677808563054845867::1718977275::1718977275::1::::<><>::
+terra.png::CompressedTexture2D::5387799538581905223::1718977275::1718977275::1::::<><>::
+TopDownHouse_FurnitureState1.png::CompressedTexture2D::855475795844228565::1718977275::1718977275::1::::<><>::
+TopDownHouse_FurnitureState2.png::CompressedTexture2D::5474338920637335130::1718977275::1718977275::1::::<><>::
+TopDownHouse_SmallItems.png::CompressedTexture2D::5612746672226393005::1718977275::1718977275::1::::<><>::
+::res://terrain/scenes/::1718977275
+object_terrain.tscn::PackedScene::6274354740132026750::1718977275::0::1::::<><>::uid://pb28gnmren46::::res://terrain/assets/decoration_terrain/arvore_dark.png<>uid://opv2i00kkmwg::::res://terrain/assets/decoration_terrain/bau.png<>uid://bq13vr2g7nfft::::res://terrain/assets/decoration_terrain/pedra_dark.png<>uid://jkqbwi5drxd7::::res://terrain/assets/decoration_terrain/grama_dark.png<>uid://cjwkujtcsnyu6::::res://terrain/assets/decoration_terrain/arbusto_dark.png<>uid://cuvagdcr3qo3x::::res://terrain/assets/decoration_terrain/placa 3.png<>uid://brt4yw76viexm::::res://terrain/assets/base_terrain/TopDownHouse_DoorsAndWindows.png<>uid://cj82td6gdjqis::::res://terrain/assets/decoration_terrain/TopDownHouse_FurnitureState2.png<>uid://cbmw0a1pn56nv::::res://terrain/assets/decoration_terrain/casa.png
+terrain.tscn::PackedScene::5713532675704053824::1718977275::0::1::::<><>::uid://ds8hitx840k65::::res://terrain/assets/base_terrain/dark_plains.png<>uid://brt4yw76viexm::::res://terrain/assets/base_terrain/TopDownHouse_DoorsAndWindows.png<>uid://baktyl2bammb3::::res://terrain/assets/base_terrain/TopDownHouse_FloorsAndWalls.png<>uid://bfy0tewkfjmw7::::res://terrain/assets/base_terrain/plains.png
+::res://test_placa/::1718977275
+bg.jpg::CompressedTexture2D::5517888656361908433::1718977275::1718977275::1::::<><>::
+Dialog_Box.png::CompressedTexture2D::1254085066224916227::1718977275::1718977275::1::::<><>::

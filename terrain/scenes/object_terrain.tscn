@@ -1,14 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://cvnlx88ysnha1"]
+[gd_scene load_steps=26 format=3 uid="uid://cvnlx88ysnha1"]
 
 [ext_resource type="Texture2D" uid="uid://pb28gnmren46" path="res://terrain/assets/decoration_terrain/arvore_dark.png" id="1_eoumb"]
 [ext_resource type="Texture2D" uid="uid://opv2i00kkmwg" path="res://terrain/assets/decoration_terrain/bau.png" id="2_wjw1s"]
+[ext_resource type="Texture2D" uid="uid://b41b4wnc7x8wg" path="res://terrain/assets/decoration_terrain/placa 2.png" id="3_1opo4"]
 [ext_resource type="Texture2D" uid="uid://bq13vr2g7nfft" path="res://terrain/assets/decoration_terrain/pedra_dark.png" id="3_fnruw"]
 [ext_resource type="Texture2D" uid="uid://jkqbwi5drxd7" path="res://terrain/assets/decoration_terrain/grama_dark.png" id="4_480ys"]
+[ext_resource type="Texture2D" uid="uid://djnyd5hugs43b" path="res://terrain/assets/decoration_terrain/placa para texto.png" id="4_bwuag"]
 [ext_resource type="Texture2D" uid="uid://cjwkujtcsnyu6" path="res://terrain/assets/decoration_terrain/arbusto_dark.png" id="5_1pc75"]
 [ext_resource type="Texture2D" uid="uid://cuvagdcr3qo3x" path="res://terrain/assets/decoration_terrain/placa 3.png" id="6_uygnh"]
 [ext_resource type="Texture2D" uid="uid://brt4yw76viexm" path="res://terrain/assets/base_terrain/TopDownHouse_DoorsAndWindows.png" id="7_c706u"]
 [ext_resource type="Texture2D" uid="uid://cj82td6gdjqis" path="res://terrain/assets/decoration_terrain/TopDownHouse_FurnitureState2.png" id="8_8vk4h"]
 [ext_resource type="Texture2D" uid="uid://cbmw0a1pn56nv" path="res://terrain/assets/decoration_terrain/casa.png" id="9_c8sw8"]
+[ext_resource type="Texture2D" uid="uid://c7p7w5tryr7fi" path="res://terrain/assets/decoration_terrain/flor.png" id="12_8wyjd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbgso"]
 texture = ExtResource("1_eoumb")
@@ -25,6 +28,22 @@ texture = ExtResource("2_wjw1s")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.25, -9.25, 9.5, -9.25, 9.375, 7.875, -9.375, 8.125)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3yff8"]
+texture = ExtResource("3_1opo4")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.125, -7.25, -1.5, -8, -1.375, -13.25, 2.875, -13.25, 3.125, -8, 12.75, -7.625, 12.625, 5.125, 2.75, 5.75, 2.875, 12.125, -2, 12.125, -1.75, 5.75, -11.625, 5.125)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sy2mc"]
+texture = ExtResource("4_bwuag")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.125, -7.25, -1.5, -8, -1.375, -13.25, 2.875, -13.25, 3.125, -8, 12.75, -7.625, 12.625, 5.125, 2.75, 5.75, 2.875, 12.125, -2, 12.125, -1.75, 5.75, -11.625, 5.125)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmtpi"]
 texture = ExtResource("3_fnruw")
@@ -55,7 +74,7 @@ texture = ExtResource("6_uygnh")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.3137, -13.435, 12.5511, -13.2583, 13.2583, 12.5511, -11.6673, 12.7279)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.125, -7.25, -1.5, -8, -1.375, -13.25, 2.875, -13.25, 3.125, -8, 12.75, -7.625, 12.625, 5.125, 2.75, 5.75, 2.875, 12.125, -2, 12.125, -1.75, 5.75, -11.625, 5.125)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7juc2"]
 texture = ExtResource("7_c706u")
@@ -1385,6 +1404,12 @@ texture = ExtResource("9_c8sw8")
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-71.5, -84, -26, -85, 2.5, -97.5, 28.5, -84, 77, -84.5, 96.5, -72, 97.5, -51.5, 90.5, -50, 93, 64, 53.5, 64, 54.5, 82.5, 28.9769, 82.8595, 27.5, 97, 16.4794, 83.0355, -52, 84, -52.5, 66.5, -91, 65, -88.5, -51, -96, -54.5, -96.5, -71.5)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ueblu"]
+texture = ExtResource("12_8wyjd")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_excpg"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bbgso")
@@ -1396,6 +1421,9 @@ sources/5 = SubResource("TileSetAtlasSource_f443o")
 sources/6 = SubResource("TileSetAtlasSource_7juc2")
 sources/7 = SubResource("TileSetAtlasSource_ipo3g")
 sources/8 = SubResource("TileSetAtlasSource_mjh7r")
+sources/9 = SubResource("TileSetAtlasSource_ueblu")
+sources/10 = SubResource("TileSetAtlasSource_3yff8")
+sources/12 = SubResource("TileSetAtlasSource_sy2mc")
 
 [node name="object_terrain" type="TileMap"]
 y_sort_enabled = true

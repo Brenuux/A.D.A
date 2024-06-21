@@ -5,5 +5,3 @@ res://levels/scenes/inicio.tscn
 res://levels/scenes/casa.tscn
 res://terrain/scenes/terrain.tscn
 res://terrain/scenes/object_terrain.tscn
-res://character/scripts/slime.gd
-res://character/scripts/character.gd
