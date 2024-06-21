@@ -1,0 +1,12 @@
+res://bosses/golem_stone_boss/golem_boss.tscn::0dbb60fc18ac4741a6441343d00ce8f8::1718977275::res://.godot/exported/133200997/export-0a90ccde87a08d3ff2c58ef76bf32eea-golem_boss.scn
+res://bosses/bullet.tscn::85ee8997c84e9c94f1d2663dc8eb14f3::1718977275::res://.godot/exported/133200997/export-ceda312fdd79d22e111ac19de2853a4f-bullet.scn
+res://character/scenes/character.tscn::405954a58c16771ebd74d59a526fb882::1719000427::res://.godot/exported/133200997/export-abbef759df05e0d875a22226e44db39c-character.scn
+res://character/scenes/slime.tscn::b0aabbae6fa7fc68f5d7707b46161f4c::1719000427::res://.godot/exported/133200997/export-3aac50d162b370f90ebc57709fceb430-slime.scn
+res://components/door_provisoria/scenes/door_componet.tscn::992b901939c98712a31dbe222eaac04e::1719000428::res://.godot/exported/133200997/export-8548bd63d885e7aaee3aff531f921730-door_componet.scn
+res://levels/scenes/boss_room.tscn::959e5fcd0ae8c1901b6f63fefefeb6eb::1718977275::res://.godot/exported/133200997/export-20a1422fb9377a3e846dc6c988947093-boss_room.scn
+res://levels/scenes/casa.tscn::da337d1459effb57adc340f41bfe57e8::1719000427::res://.godot/exported/133200997/export-de6e72917b8e202b6eeda974ac8686aa-casa.scn
+res://levels/scenes/inicio.tscn::75ccf81152a5e18acc90b5c15723a4fe::1719004432::res://.godot/exported/133200997/export-42e7928e8b4ccd6e41c6f6551318e4e3-inicio.scn
+res://menu/menu.tscn::61df248b4f08a547db8e48097d812f46::1719000427::res://.godot/exported/133200997/export-4e96fb701b3cf98083d3f26d878d1a8e-menu.scn
+res://terrain/scenes/object_terrain.tscn::2a7481fb628922f43a209d2a02baaffa::1719000428::res://.godot/exported/133200997/export-2fe31ca23d51209df926ed6e9a377f6e-object_terrain.scn
+res://terrain/scenes/terrain.tscn::2569d00990afefd5f8534f107c39c9be::1719000427::res://.godot/exported/133200997/export-e45e0b45bb3e1a8b740bbdf0874c79a8-terrain.scn
+res://default_bus_layout.tres::f6e36dc848eaad31b9a87d4a230117fb::1718977275::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
